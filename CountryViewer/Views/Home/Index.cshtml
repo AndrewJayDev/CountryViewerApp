@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CountryViewer.Models.CountryModel>
+
+@{
+    ViewData["Title"] = "Index";
+
+
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col w-25">
+                <div class="form-group">
+                    <label for="countryselect">Please choose a country from the list below.</label>
+                    <select class="form-control" id="countryselect">
+                        @*loop through country collection and populate a list with names of countries*@
+                        @foreach (var item in Model)
+                        {
+                            <option id="@item.Alpha3Code" class="@item.Name" onclick="saveID(this.className)">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </option>
+                        }
+                    </select>
+                    @*Displays country when clicked using Javascript*@
+                    <button type="submit" class="btn btn-primary" onclick="toggleCountry()">Submit</button>
+                </div>
+            
+        </div>
+        <div class="col">
+            @*Partial views*@
+            @foreach (var item in Model)
+            {
+                @Html.Partial("_partial", item)
+            }
+
+        </div>
+        
+    </div>
+</div>
+
+<script type="text/javascript" src="~/js/site.js"></script>

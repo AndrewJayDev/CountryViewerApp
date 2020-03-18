@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryViewer", "CountryViewer\CountryViewer.csproj", "{1EF3863E-08AB-47B9-928B-FB71619EB09E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReadMe", "ReadMe", "{022B973C-10A3-427F-9395-73B14F961141}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EF3863E-08AB-47B9-928B-FB71619EB09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF3863E-08AB-47B9-928B-FB71619EB09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF3863E-08AB-47B9-928B-FB71619EB09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF3863E-08AB-47B9-928B-FB71619EB09E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BFA87FF-1870-47E1-82C8-F029DD23A0ED}
+	EndGlobalSection
+EndGlobal

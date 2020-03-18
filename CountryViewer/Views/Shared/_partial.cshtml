@@ -1,0 +1,64 @@
+﻿@model CountryViewer.Models.CountryModel
+
+    <div id="@Model.Name" class="countries" style="display:none">
+        <h1 class=" text-center"> @Model.Name</h1>
+        <div class="w-100 align-content-center border-dark mb-3">
+            <img src="@Model.Flag" alt="Flag of: @Model.Name" class="w-100 " />
+        </div>
+            
+            <h4> Population: </h4> <p>@Model.Population.ToString("N0") </p>
+            <h4> Capital: </h4> <p>@Model.Capital</p>
+            <h4>Currencies:  </h4>
+                @*loop which displays currency name*@
+            <p>
+                @foreach (var c in Model.Currencies)
+                {
+                    @c.Name
+                }
+            </p>
+            <h4>Bordering Countries: </h4>
+            <p>
+                @*loop which displays bordering countries and then separates them with a comma and space*@
+                @{
+                    List<string> BorderingCountries = new List<string>();
+                    @foreach (string arrItem in Model.Borders)
+                    {
+
+                        BorderingCountries.Add(arrItem);
+                    }
+
+                    @(string.Join(", ", BorderingCountries));
+                }
+            </p>
+            <h4>Time Zones: </h4>
+            <p>
+                @*loop which displays timezones and then separates them with a comma and space*@
+
+                @{
+                    List<string> TimeZones = new List<string>();
+                    @foreach (string arrItem in Model.TimeZones)
+                    {
+                        TimeZones.Add(arrItem);
+                    }
+
+                    @(string.Join(", ", TimeZones));
+                }
+            </p>
+            <h4>Languages:  </h4>
+            <p>
+                @*loop which displays Languages and then separates them with a comma and space*@
+                @{
+                    List<string> Languages = new List<string>();
+                    @foreach (var l in Model.Languages)
+                    {
+                        Languages.Add(l.name);
+
+
+                    }
+                    @(string.Join(", ", Languages));
+
+                }
+
+            </p>
+</div>
+
